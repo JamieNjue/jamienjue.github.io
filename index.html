@@ -74,6 +74,7 @@
     .hero-content h1 em { color: var(--sage); font-style: normal; }
     .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; max-width: 740px; }
     .tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid var(--border); color: var(--gray-5); padding: 8px 16px; border-radius: 20px; }
+    .tag-sage { border-color: var(--sage-dark); color: var(--sage); background: rgba(122,158,135,0.08); }
     .hero-bio { font-size: 1.05rem; line-height: 1.75; color: var(--gray-5); max-width: 620px; margin-bottom: 40px; }
     .hero-bio strong { color: var(--white); font-weight: 500; }
     .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
@@ -83,7 +84,8 @@
     .btn-outline-white { background: transparent; color: var(--white); border: 1px solid var(--border); }
     .btn-outline-white:hover { border-color: var(--gray-4); background: var(--gray-2); }
     .hero-circle { width: 90px; height: 90px; border-radius: 50%; overflow: hidden; border: 3px solid var(--sage); flex-shrink: 0; margin-bottom: 20px; }
-    .hero-circle img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    /* FIXED: changed object-position from "center top" to "50% 15%" so face is better centered in the circle */
+    .hero-circle img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; }
 
     /* STAT BAR */
     .stat-bar { background: var(--sage-dark); padding: 24px 0; }
@@ -247,8 +249,8 @@
         <span class="eyebrow">Clinical Assistant Professor &middot; University of Florida</span>
         <h1>DR. JAMIE <em>NJUE</em></h1>
         <div class="hero-tags">
-          <span class="tag">LMHC &middot; FL #MH20792</span>
-          <span class="tag">Qualified Supervisor</span>
+          <span class="tag tag-sage">LMHC &middot; FL #MH20792</span>
+          <span class="tag tag-sage">Qualified Supervisor</span>
           <span class="tag">Ph.D. Counselor Education</span>
           <span class="tag">Certified Restorative Justice Facilitator</span>
           <span class="tag">Licensed DV Advocate</span>
@@ -271,7 +273,7 @@
           <div class="stat-div"></div>
           <div class="stat-item"><span class="stat-num">2020</span><span class="stat-label">Licensed LMHC</span></div>
           <div class="stat-div"></div>
-          <div class="stat-item"><span class="stat-num">4+</span><span class="stat-label">Years Supervising</span></div>
+          <div class="stat-item"><span class="stat-num">3+</span><span class="stat-label">Years Supervising</span></div>
           <div class="stat-div"></div>
           <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Guest Lectures</span></div>
           <div class="stat-div"></div>
@@ -437,10 +439,6 @@
             <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Family systems theory, emotionally immature parents, enmeshment and differentiation, estrangement, boundary work, unhealthy family dynamics.</div>
           </div>
 
-
-
-
-
           <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="toggleCard(this)">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
               <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Identity &amp; Cultural Responsivity</span>
@@ -467,8 +465,6 @@
 
         </div>
 
-
-
         <span class="eyebrow" style="display:block;margin-bottom:16px;">Supervision</span>
         <div class="supervision-grid reveal">
           <div class="sup-card"><span class="sup-period">Aug 2023 &ndash; Present</span><h3>Couples and Relationship Therapy Supervision</h3><p>Supervise doctoral interns, counseling interns, and postdoctoral residents at UF CWC. Ongoing consultation on IPV, high-conflict couples, and DV risk assessment.</p></div>
@@ -482,7 +478,6 @@
           <div class="lead-row"><div class="lead-date">Sep 2024&ndash;Present</div><div><div class="lead-title">Couples and Relationship Therapy Team Coordinator</div><div class="lead-org">UF Counseling and Wellness Center</div><p class="lead-desc">Oversee intake, referrals, and access coordination for couples therapy services. Develop and implement clinical policy. Provide individual and group supervision focused on couples work.</p></div></div>
           <div class="lead-row"><div class="lead-date">Jun 2023&ndash;Present</div><div><div class="lead-title">Intimate Partner Violence Consultant</div><div class="lead-org">University of Florida Police Department</div><p class="lead-desc">Designated clinical consultant to UFPD for students navigating stalking and physical violence. Risk and threat assessment consultation with cross-system care coordination.</p></div></div>
           <div class="lead-row"><div class="lead-date">Jan 2025&ndash;Present</div><div><div class="lead-title">In-Unit Faculty and Staff Council Member</div><div class="lead-org">UF Counseling and Wellness Center</div><p class="lead-desc">Elected to seven-member shared governance body overseeing faculty professional leave, merit eligibility, and peer evaluation. Contributing to bylaw development.</p></div></div>
-
         </div>
       </div>
     </section>
@@ -559,7 +554,6 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
-
 
   <script>
     function toggleCard(card) {
