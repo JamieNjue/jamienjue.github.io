@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Jamie Njue | Clinical Assistant Professor | Counselor Education</title>
+  <meta name="description" content="Dr. Jamie Njue is a Clinical Assistant Professor, Licensed Mental Health Counselor, and Qualified Supervisor at the University of Florida specializing in intimate partner violence, high-conflict couples, and counselor education." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black:       #0D0D0D;
+      --white:       #F5F3EE;
+      --sage:        #7A9E87;
+      --sage-dark:   #4E6E59;
+      --sage-light:  #DCE9DF;
+      --gray-1:      #1A1A1A;
+      --gray-2:      #2A2A2A;
+      --gray-3:      #444;
+      --gray-4:      #ABABAB;
+      --gray-5:      #C8C5BE;
+      --border:      #2E2E2E;
+      --border-light:#E0DDD6;
+      --font-display:'Bebas Neue', sans-serif;
+      --font-body:   'DM Sans', system-ui, sans-serif;
+      --nav-h:       68px;
+      --max-w:       1100px;
+      --radius:      2px;
+      --t:           0.18s ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--black); font-family: var(--font-body); font-weight: 300; line-height: 1.65; font-size: 16px; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* NAV */
+    .topnav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: #0a0a0a; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; z-index: 100; border-bottom: 2px solid var(--sage-dark); box-shadow: 0 2px 24px rgba(0,0,0,0.4); }
+    .nav-logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.08em; color: var(--white); }
+    .nav-logo span { color: var(--sage); }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #B0ADA6; padding: 8px 14px; border-radius: var(--radius); transition: all var(--t); }
+    .nav-links a:hover { color: var(--white); background: var(--gray-2); }
+    .nav-links a.active { color: var(--sage); background: rgba(122,158,135,0.12); border-bottom: 2px solid var(--sage); border-radius: 0; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all var(--t); }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--black); border-bottom: 1px solid var(--border); padding: 24px 32px; z-index: 99; flex-direction: column; gap: 4px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray-5); padding: 12px 0; border-bottom: 1px solid var(--border); transition: color var(--t); }
+    .mobile-menu a:hover { color: var(--sage); }
+
+    /* LAYOUT */
+    .page { padding-top: var(--nav-h); }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 48px; }
+    .section { padding: 64px 0; }
+    .section-dark { background: var(--black); color: var(--white); }
+
+    /* TYPE */
+    .eyebrow { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; }
+    h1 { font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 7rem); line-height: 0.92; letter-spacing: 0.02em; font-weight: 400; }
+    h2 { font-family: var(--font-body); font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.0; letter-spacing: -0.02em; font-weight: 700; margin-bottom: 48px; text-transform: none; }
+    h3 { font-size: 1rem; font-weight: 700; letter-spacing: 0.02em; margin-bottom: 6px; }
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* HERO */
+    #home { background: var(--black); color: var(--white); min-height: calc(100vh - var(--nav-h)); display: flex; align-items: center; justify-content: flex-start; padding-left: 0; }
+    .hero-content { padding: 52px 48px 60px; display: flex; flex-direction: column; justify-content: flex-start; width: 100%; max-width: 720px; }
+    .hero-content h1 { margin-bottom: 32px; }
+    .hero-content h1 em { color: var(--sage); font-style: normal; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; max-width: 740px; }
+    .tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid var(--border); color: var(--gray-5); padding: 8px 16px; border-radius: 20px; }
+    .tag-sage { border-color: var(--sage-dark); color: var(--sage); background: rgba(122,158,135,0.08); }
+    .hero-bio { font-size: 1.05rem; line-height: 1.75; color: var(--gray-5); max-width: 620px; margin-bottom: 40px; }
+    .hero-bio strong { color: var(--white); font-weight: 500; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 14px 28px; border-radius: var(--radius); transition: all var(--t); cursor: pointer; }
+    .btn-sage { background: var(--sage); color: var(--black); }
+    .btn-sage:hover { background: #8fb89e; }
+    .btn-outline-white { background: transparent; color: var(--white); border: 1px solid var(--border); }
+    .btn-outline-white:hover { border-color: var(--gray-4); background: var(--gray-2); }
+    .hero-circle { width: 90px; height: 90px; border-radius: 50%; overflow: hidden; border: 3px solid var(--sage); flex-shrink: 0; margin-bottom: 20px; }
+    .hero-circle img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+
+    /* STAT BAR */
+    .stat-bar { background: var(--sage-dark); padding: 24px 0; }
+    .stat-bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+    .stat-item { text-align: center; flex: 1; min-width: 120px; }
+    .stat-num { font-family: var(--font-display); font-size: 2.2rem; color: var(--white); letter-spacing: 0.05em; line-height: 1; display: block; }
+    .stat-label { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.6); display: block; margin-top: 4px; }
+    .stat-div { width: 1px; height: 32px; background: rgba(255,255,255,0.2); flex-shrink: 0; }
+
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .about-text p { font-size: 1rem; color: var(--gray-3); line-height: 1.6; }
+    .cred-item { display: grid; grid-template-columns: 80px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--border-light); align-items: start; }
+    .cred-item:first-child { border-top: 1px solid var(--border-light); }
+    .cred-year { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; color: var(--sage-dark); text-transform: uppercase; padding-top: 3px; }
+    .cred-title { font-weight: 600; font-size: 0.88rem; margin-bottom: 2px; }
+    .cred-sub { font-size: 0.8rem; color: var(--gray-4); }
+
+    /* RESEARCH */
+    #research { background: var(--black); color: var(--white); }
+    .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 64px; }
+    .interest-cell { background: var(--gray-1); padding: 24px 28px; transition: background var(--t); }
+    .interest-cell:hover { background: var(--gray-2); }
+    .interest-num { font-family: var(--font-display); font-size: 3rem; color: var(--border); line-height: 1; margin-bottom: 16px; display: block; }
+    .interest-cell h3 { font-size: 0.95rem; font-weight: 500; color: var(--white); margin-bottom: 10px; }
+    .interest-cell p { font-size: 0.85rem; font-weight: 300; color: var(--gray-4); line-height: 1.65; margin: 0; }
+    .pub-block { border-left: 3px solid var(--sage); padding: 20px 24px; margin-bottom: 16px; background: var(--gray-1); }
+    .pub-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); margin-bottom: 8px; display: block; }
+    .pub-block p { font-size: 0.88rem; color: var(--gray-5); margin: 0; line-height: 1.65; }
+    .pub-block p em { color: var(--white); font-style: italic; }
+    .pub-block p strong { color: var(--white); }
+    .project-card { background: var(--gray-1); border: 1px solid var(--border); padding: 36px; margin-bottom: 16px; }
+    .project-card .badge { display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; background: rgba(122,158,135,0.15); color: var(--sage); border: 1px solid var(--sage-dark); padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .project-card h3 { font-family: var(--font-display); font-size: 2rem; letter-spacing: 0.04em; color: var(--white); font-weight: 400; margin-bottom: 4px; }
+    .project-card .project-sub { font-size: 0.8rem; font-style: italic; color: var(--gray-4); margin-bottom: 16px; }
+    .project-meta-row { display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 16px; }
+    .project-meta-row span { font-size: 0.75rem; color: var(--gray-4); font-weight: 500; }
+    .project-card p { font-size: 0.88rem; color: var(--gray-5); line-height: 1.7; margin: 0; }
+
+    /* TEACHING */
+    #teaching .section-inner { display: grid; grid-template-columns: 260px 1fr; gap: 64px; align-items: start; }
+    .philosophy-pull { background: var(--sage-light); border-left: 4px solid var(--sage-dark); padding: 28px 24px; margin-top: 32px; }
+    .philosophy-pull p { font-size: 0.92rem; font-style: italic; color: var(--gray-3); line-height: 1.75; margin: 0; }
+    .subsection-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage-dark); padding: 32px 0 8px; display: block; border-top: 2px solid var(--sage-dark); margin-top: 16px; }
+    .subsection-label:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+    .course-row { display: grid; grid-template-columns: 90px 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--border-light); align-items: start; }
+    .course-row:first-child { border-top: 1px solid var(--border-light); }
+    .course-date { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; color: var(--sage-dark); text-transform: uppercase; line-height: 1.5; padding-top: 3px; }
+    .course-name { font-weight: 600; font-size: 0.92rem; margin-bottom: 2px; }
+    .course-inst { font-size: 0.78rem; color: var(--gray-4); margin-bottom: 6px; }
+    .course-desc { font-size: 0.83rem; color: var(--gray-3); line-height: 1.6; margin: 0; }
+
+    /* CLINICAL */
+    #clinical { background: var(--black); color: var(--white); }
+    .supervision-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 56px; }
+    .sup-card { background: var(--gray-1); border: 1px solid var(--border); padding: 28px; }
+    .sup-period { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); margin-bottom: 10px; display: block; }
+    .sup-card h3 { font-size: 0.95rem; color: var(--white); margin-bottom: 10px; }
+    .sup-card p { font-size: 0.83rem; color: var(--gray-4); line-height: 1.6; margin: 0; }
+    .lead-row { display: grid; grid-template-columns: 90px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--border); align-items: start; }
+    .lead-row:first-child { border-top: 1px solid var(--border); }
+    .lead-date { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; color: var(--sage); text-transform: uppercase; padding-top: 3px; line-height: 1.5; }
+    .lead-title { font-weight: 600; font-size: 0.92rem; color: var(--white); margin-bottom: 3px; }
+    .lead-org { font-size: 0.78rem; color: var(--gray-4); margin-bottom: 6px; }
+    .lead-desc { font-size: 0.83rem; color: var(--gray-5); line-height: 1.6; margin: 0; }
+
+    /* CV STRIP */
+    #cv { background: var(--sage-dark); color: var(--white); padding: 80px 0; }
+    .cv-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; flex-wrap: wrap; }
+    #cv h2 { margin-bottom: 12px; color: var(--white); }
+    #cv p { font-size: 0.95rem; color: rgba(255,255,255,0.7); max-width: 500px; margin: 0; }
+    .btn-white { background: var(--white); color: var(--sage-dark); font-family: var(--font-body); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 16px 36px; border-radius: var(--radius); flex-shrink: 0; transition: all var(--t); display: inline-block; border: none; cursor: pointer; }
+    .btn-white:hover { background: var(--sage-light); }
+
+    /* CONTACT */
+    #contact { background: var(--black); color: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .contact-row { display: flex; align-items: flex-start; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--border); }
+    .contact-row:first-child { border-top: 1px solid var(--border); }
+    .contact-icon-box { width: 40px; height: 40px; background: var(--gray-2); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; border-radius: 2px; }
+    .contact-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage); margin-bottom: 4px; display: block; }
+    .contact-value { font-size: 0.92rem; color: var(--white); transition: color var(--t); }
+    a.contact-value:hover { color: var(--sage); }
+    .contact-note { background: var(--gray-1); border: 1px solid var(--border); padding: 36px; }
+    .contact-note h3 { font-family: var(--font-display); font-size: 1.8rem; letter-spacing: 0.04em; color: var(--white); font-weight: 400; margin-bottom: 16px; }
+    .contact-note p { font-size: 0.88rem; color: var(--gray-4); line-height: 1.75; margin-bottom: 20px; }
+
+    /* FOOTER */
+    footer { background: var(--gray-1); border-top: 1px solid var(--border); padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .footer-name { font-family: var(--font-display); font-size: 1.1rem; letter-spacing: 0.08em; color: var(--white); }
+    .footer-name span { color: var(--sage); }
+    .footer-copy { font-size: 0.72rem; color: var(--gray-4); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      #home { min-height: auto; }
+      .hero-content { padding: 48px 24px 64px; }
+      .hero-circle { width: 90px; height: 90px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .research-grid { grid-template-columns: 1fr; }
+      #teaching .section-inner { grid-template-columns: 1fr; }
+      .supervision-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .container { padding: 0 32px; }
+      .section { padding: 72px 0; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .topnav { padding: 0 24px; }
+      .container { padding: 0 24px; }
+      h2 { font-size: 2.8rem; margin-bottom: 32px; }
+      .stat-bar-inner { justify-content: center; }
+      .stat-div { display: none; }
+      .cv-inner { flex-direction: column; }
+      footer { padding: 24px; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="topnav">
+    <div class="nav-logo">DR. JAMIE <span>NJUE</span></div>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#clinical">Clinical</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#clinical">Clinical</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="page">
+
+    <!-- HERO -->
+    <section id="home">
+      <div class="hero-content">
+        <div class="hero-circle">
+          <img src="jamie-njue-headshot.jpg" alt="Dr. Jamie Njue" />
+        </div>
+        <span class="eyebrow">Clinical Assistant Professor &middot; University of Florida</span>
+        <h1>DR. JAMIE <em>NJUE</em></h1>
+        <div class="hero-tags">
+          <span class="tag tag-sage">LMHC &middot; FL #MH20792</span>
+          <span class="tag tag-sage">Qualified Supervisor</span>
+          <span class="tag">Ph.D. Counselor Education</span>
+          <span class="tag">Certified Restorative Justice Facilitator</span>
+          <span class="tag">Licensed DV Advocate</span>
+        </div>
+        <p class="hero-bio">
+          <strong>PhD, LMHC | Clinician, Educator, and Scholar</strong>
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-sage">Contact</a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- STAT BAR -->
+    <div class="stat-bar">
+      <div class="container">
+        <div class="stat-bar-inner">
+          <div class="stat-item"><span class="stat-num">2025</span><span class="stat-label">Ph.D. Conferred</span></div>
+          <div class="stat-div"></div>
+          <div class="stat-item"><span class="stat-num">2020</span><span class="stat-label">Licensed LMHC</span></div>
+          <div class="stat-div"></div>
+          <div class="stat-item"><span class="stat-num">5+</span><span class="stat-label">Years Supervising</span></div>
+          <div class="stat-div"></div>
+          <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Guest Lectures</span></div>
+          <div class="stat-div"></div>
+          <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">Credentials Held</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <span class="eyebrow">Background</span>
+        <h2 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.8rem);text-transform:none;letter-spacing:-0.02em;margin-bottom:48px;">About</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p style="color:#555;line-height:1.6;"><strong style="color:#0D0D0D;font-weight:700;">I am a clinician, educator, scholar, and advocate who believes that people deserve care that is honest, courageous, and reaches them where they are.</strong> I intentionally occupy the spaces many clinicians find hardest to inhabit. I specialize in intimate partner violence (including work with those who cause harm), high-conflict couples, and complex and personality presentations. I believe that extending healing to those who cause harm is one of the most consequential things therapy can do, and that breaking these cycles requires more than empathy. It demands clinical rigor and radical presence.</p>
+            <p style="color:#555;line-height:1.6;">Community is equally central to who I am as a professional. I take every opportunity to bring mental health outreach directly into our communities because the knowledge and skills that change lives in the therapy room should not only be available to those who can afford, access, or even have trust in the field.</p>
+          </div>
+          <div class="reveal">
+            <div class="cred-item"><span class="cred-year">2025</span><div><div class="cred-title">Ph.D., Counseling and Counselor Education</div><div class="cred-sub">University of Florida &middot; CACREP Accredited</div></div></div>
+            <div class="cred-item"><span class="cred-year">2020</span><div><div class="cred-title">Ed.S. &amp; M.Ed., Mental Health Counseling</div><div class="cred-sub">University of Florida &middot; CACREP Accredited</div></div></div>
+            <div class="cred-item"><span class="cred-year">2017</span><div><div class="cred-title">B.A., Psychology (Minor: Sociology)</div><div class="cred-sub">University of Florida</div></div></div>
+
+            <div class="cred-item"><span class="cred-year">2020</span><div><div class="cred-title">Licensed Mental Health Counselor</div><div class="cred-sub">State of Florida &middot; #MH20792</div></div></div>
+            <div class="cred-item"><span class="cred-year">FL</span><div><div class="cred-title">Qualified Supervisor</div><div class="cred-sub">State of Florida</div></div></div>
+            <div class="cred-item"><span class="cred-year">Cert.</span><div><div class="cred-title">Certified Restorative Justice Facilitator</div></div></div>
+            <div class="cred-item"><span class="cred-year">Cert.</span><div><div class="cred-title">Licensed Domestic Violence Advocate</div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section section-dark" id="research">
+      <div class="container">
+        <span class="eyebrow">Scholarship</span>
+        <h2 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.8rem);text-transform:none;letter-spacing:-0.02em;margin-bottom:48px;">Research</h2>
+        <p style="color:var(--gray-4);max-width:680px;margin-bottom:36px;font-size:1rem;line-height:1.8;">My research interests sit at the intersection of <strong style="color:var(--white);font-weight:500;">language</strong>, <strong style="color:var(--white);font-weight:500;">power</strong>, and <strong style="color:var(--white);font-weight:500;">culture</strong>. I am particularly interested in <strong style="color:var(--white);font-weight:500;">how psychological terminology is altered by its circulation through popular and digital discourse</strong>, what happens to the meaning of these terms in transit, how that shapes the way people understand themselves and others, and how these shifts in meaning impact both society and our field as a whole. A second line of inquiry runs through power and control across clinical, relational, and systemic contexts, with particular interest in <strong style="color:var(--white);font-weight:500;">how language functions as a mechanism of power and control, and what this means in both relationships and in systems at large</strong>.</p>
+
+        <div class="research-grid reveal">
+          <div class="interest-cell"><span class="interest-num">01</span><h3>Intimate Partner Violence &amp; Perpetrator Intervention</h3><p>Clinical and systemic approaches to IPV with both survivors and perpetrators, including risk assessment, safety planning, and restorative models of intervention.</p></div>
+          <div class="interest-cell"><span class="interest-num">02</span><h3>High-Conflict Couples &amp; Relational Power Dynamics</h3><p>Patterns of coercion, control, and narcissistic presentation across clinical and subclinical populations in couples therapy contexts.</p></div>
+          <div class="interest-cell"><span class="interest-num">03</span><h3>Clinical Language in Cultural Discourse</h3><p>How psychological terminology migrates into social media and popular culture, shaping client self-concept, help-seeking behavior, and treatment engagement.</p></div>
+          <div class="interest-cell"><span class="interest-num">04</span><h3>Counselor Education &amp; Clinician Formation</h3><p>Supervision models, counselor self-efficacy, and the development of professional identity and competence in graduate training programs.</p></div>
+        </div>
+
+        <span class="eyebrow" style="display:block;margin-bottom:16px;">Dissertation</span>
+        <div class="pub-block reveal">
+          <span class="pub-label">Doctoral Dissertation &middot; University of Florida &middot; 2025</span>
+          <p>Njue, J. (2025). <em>#WalkingRedFlag: A thematic analysis of Instagram posts discussing unhealthy romantic relationship dynamics.</em> Doctoral dissertation, University of Florida.</p>
+        </div>
+
+        <span class="eyebrow" style="display:block;margin-top:48px;margin-bottom:16px;">Active Research</span>
+        <div class="project-card reveal">
+          <span class="badge">Active &middot; Co-Investigator</span>
+          <h3>PROJECT HEART</h3>
+          <div class="project-sub">Humanistic Experiential Awareness &amp; Real-Time Training</div>
+          <div class="project-meta-row"><span>PI: Amber Moss, PhD</span><span>Role: Co-Investigator / Research Collaborator</span></div>
+          <p>Examining the impact of the HEART Model on master's-level counseling students' perceived competence in couples and family counseling. Data collection includes pre/post administration of an adapted Counselor Self-Efficacy Scale and qualitative written reflections from students enrolled in an advanced couples counseling course within a university training clinic.</p>
+        </div>
+
+        <span class="eyebrow" style="display:block;margin-top:48px;margin-bottom:16px;">Conference Presentations</span>
+        <div class="pub-block reveal"><span class="pub-label">Conference Presentation &middot; 2020</span><p>Chambliss, C., &amp; <strong>Edmondson, J.</strong> (2020, September). Talking Race &amp; Racial Justice with Children &amp; Youth. <em>BOOST Alliance Conference</em>, online.</p></div>
+        <div class="pub-block reveal"><span class="pub-label">Conference Presentation &middot; 2020</span><p><strong>Edmondson, J.</strong>, &amp; Gee, C. (2020, September). Safe Zone Training: How to Successfully Support the LGBTQ+ Youth in Your Program. <em>BOOST Alliance Conference</em>, online.</p></div>
+        <div class="pub-block reveal"><span class="pub-label">Conference Presentation &middot; 2019</span><p>Schuermann, C., Super, J., &amp; Edmondson, J. (2019, March). The Shared Trauma of School Shootings and Their Impact on Counseling and Education. <em>American Counseling Association Conference</em>, New Orleans, LA.</p></div>
+        <p style="font-size:0.75rem;color:var(--gray-4);font-style:italic;margin-top:16px;">Note: Publications and presentations prior to 2025 appear under the name Edmondson.</p>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section class="section" id="teaching">
+      <div class="container">
+        <span class="eyebrow">Education &amp; Training</span>
+        <h2 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.8rem);text-transform:none;letter-spacing:-0.02em;margin-bottom:48px;">Teaching</h2>
+        <div class="section-inner">
+
+          <div class="reveal">
+            <p style="font-size:0.88rem;color:#555;line-height:1.8;">My teaching spans graduate counselor education, doctoral psychology training, and professional development for practicing clinicians. I work to create conditions for <strong style="color:#1a1a1a;font-weight:700;">critical reflection</strong>, <strong style="color:#1a1a1a;font-weight:700;">skill integration</strong>, <strong style="color:#1a1a1a;font-weight:700;">hands-on engagement</strong>, and <strong style="color:#1a1a1a;font-weight:700;">clinical identity development</strong> at every level.</p>
+            <div class="philosophy-pull">
+              <p>I see teaching as <strong style="color:#1a1a1a;font-weight:600;">a relational process</strong> that demands the same honesty, confrontation of complexity, and cultural accountability I bring into my clinical work. I try to build learning environments where students are <strong style="color:#1a1a1a;font-weight:600;">not just acquiring skills but actively forming professional identities,</strong> where difficult material is not avoided but examined, and where the question we keep returning to is: <strong style="color:#1a1a1a;font-weight:600;">how does this actually show up in practice, and for whom?</strong></p>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <span class="subsection-label">University Courses</span>
+            <div>
+              <div class="course-row"><div class="course-date">Spring 2026</div><div><div class="course-name">Advanced Family Counseling</div><div class="course-inst">MHS 7431 &middot; University of Florida &middot; Instructor of Record</div><p class="course-desc">Graduate-level instruction in family systems theory, high-conflict relational dynamics, and couples therapy interventions with experiential learning and applied clinical integration.</p></div></div>
+              <div class="course-row"><div class="course-date">2023&ndash;2025</div><div><div class="course-name">Advanced Family Counseling</div><div class="course-inst">MHS 7431 &middot; University of Florida &middot; Co-Instructor &amp; Clinical Coordinator</div><p class="course-desc">Supported graduate instruction through classroom facilitation, case-based learning, and formative student feedback.</p></div></div>
+              <div class="course-row"><div class="course-date">2018, 2024</div><div><div class="course-name">First Year Florida: PROMISE &amp; TRiO Sections</div><div class="course-inst">SLS 1102 &middot; University of Florida</div><p class="course-desc">Transition seminar for first-generation, low-income, and historically marginalized undergraduates addressing academic self-efficacy, identity, and institutional navigation.</p></div></div>
+            </div>
+
+            <span class="subsection-label">Recurring Seminar Series</span>
+            <div>
+              <div class="course-row"><div class="course-date">2023&ndash;2026 Annual</div><div><div class="course-name">Cultural Responsivity in Clinical Practice</div><div class="course-inst">Counseling Psychology PhD Program &middot; University of Florida</div><p class="course-desc">12-part annual seminar series for doctoral practicum students covering culturally responsive frameworks and identity-conscious case conceptualization.</p></div></div>
+              <div class="course-row"><div class="course-date">2023&ndash;2026 Annual</div><div><div class="course-name">Affirmative Therapy for LGBTQ+ Clients</div><div class="course-inst">UF Counseling &amp; Wellness Center</div><p class="course-desc">3-part annual seminar series for postdoctoral residents and doctoral interns on affirmative clinical frameworks and identity-affirming assessment.</p></div></div>
+            </div>
+
+            <span class="subsection-label">Selected Guest Lectures</span>
+            <div>
+              <div class="course-row"><div class="course-date">Jan 2025</div><div><div class="course-name">Sex and Sexuality in Couples</div><div class="course-inst">Human Sexuality &middot; UF</div></div></div>
+              <div class="course-row"><div class="course-date">Nov 2024</div><div><div class="course-name">High-Conflict Couples and Power-Based Relational Dynamics</div><div class="course-inst">UF Counselor Education Program</div></div></div>
+              <div class="course-row"><div class="course-date">Sep 2024</div><div><div class="course-name">Social and Systemic Genograms</div><div class="course-inst">Counseling Theories &middot; UF</div></div></div>
+              <div class="course-row"><div class="course-date">Jul 2024</div><div><div class="course-name">Intergenerational Trauma</div><div class="course-inst">Assessment in Counseling &middot; UF</div></div></div>
+              <div class="course-row"><div class="course-date">May 2024</div><div><div class="course-name">"You're Lucky to Have Me." Narcissism in Couples Work</div><div class="course-inst">Advanced Family Therapy &middot; UF</div></div></div>
+              <div class="course-row"><div class="course-date">Mar 2023</div><div><div class="course-name">Intimate Partner Violence in the LGBTQ+ Community</div><div class="course-inst">Counseling for LGBTQ+ Populations &middot; UF</div></div></div>
+              <div class="course-row"><div class="course-date">Mar 2023</div><div><div class="course-name">Intimate Partner Violence: Best Practices for Therapists</div><div class="course-inst">Trauma and Crisis &middot; UF</div></div></div>
+            </div>
+
+            <span class="subsection-label">Professional Trainings Delivered</span>
+            <div>
+              <div class="course-row"><div class="course-date">Mar 2026</div><div><div class="course-name">Intimate Partner Violence and Systemic Abuse: Clinical Assessment and Intervention</div><div class="course-inst">Professional Training &middot; Private Practice Setting &middot; Orlando, FL</div></div></div>
+              <div class="course-row"><div class="course-date">2024&ndash;2025</div><div><div class="course-name">De-escalation in Healthcare Settings</div><div class="course-inst">Suwannee River Area Health Education Center</div></div></div>
+              <div class="course-row"><div class="course-date">Nov 2021</div><div><div class="course-name">Crisis and De-escalation in Community Settings</div><div class="course-inst">ACES in Motion</div></div></div>
+              <div class="course-row"><div class="course-date">Jan 2021</div><div><div class="course-name">Trauma and Crisis: The Basics</div><div class="course-inst">Kids Count, Non-Profit</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLINICAL -->
+    <section class="section section-dark" id="clinical">
+      <div class="container">
+        <span class="eyebrow">Practice &amp; Supervision</span>
+        <h2 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.8rem);text-transform:none;letter-spacing:-0.02em;margin-bottom:48px;">Clinical Work</h2>
+        <p style="color:var(--gray-4);max-width:640px;margin-bottom:48px;font-size:1rem;line-height:1.8;">My approach is <strong style="color:var(--white);font-weight:500;">honest</strong> and <strong style="color:var(--white);font-weight:500;">relational</strong>. I name what goes unnamed, ask the questions that are hardest to ask, and stay with what comes up. For many clients, that kind of presence is what genuine care and support look like. It's also important to me to bring clinical work beyond the therapy room and into the community because access and trust are not simply logistical problems, they are clinical ones.</p>
+
+        <span class="eyebrow">Specialties</span>
+
+        <div class="spec-cards" style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:56px;">
+
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
+              <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Couples &amp; Relational Therapy</span>
+              <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
+            </div>
+            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">High-conflict couples, relational power dynamics, Relational Life Therapy (Terry Real), attachment wounds, betrayal, couples therapy across the lifespan.</div>
+          </div>
+
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
+              <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Intimate Partner Violence</span>
+              <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
+            </div>
+            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Survivor intervention, perpetrator intervention, risk assessment in DV contexts, safety planning, IPV consultation.</div>
+          </div>
+
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
+              <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Complex Presentations</span>
+              <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
+            </div>
+            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Narcissistic traits (clinical and subclinical), BPD/NPD/ASPD/HPD, empathic confrontation, working with challenging clients.</div>
+          </div>
+
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
+              <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Family Systems &amp; Intergenerational Work</span>
+              <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
+            </div>
+            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Family systems theory, emotionally immature parents, enmeshment and differentiation, estrangement, boundary work, unhealthy family dynamics.</div>
+          </div>
+
+
+
+
+
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
+              <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Identity &amp; Cultural Responsivity</span>
+              <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
+            </div>
+            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">LGBTQ+ affirmative practice, identity-conscious case conceptualization, culturally responsive frameworks, oppression and systemic barriers.</div>
+          </div>
+
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
+              <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Clinical Supervision &amp; Clinician Formation</span>
+              <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
+            </div>
+            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Supervision across master's, doctoral, and postdoctoral levels; live supervision; group supervision; counselor education and pedagogy.</div>
+          </div>
+
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
+              <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Community-Based Mental Health Care</span>
+              <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
+            </div>
+            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Certified facilitator, community outreach, expanding access to mental health care.</div>
+          </div>
+
+        </div>
+
+
+
+        <span class="eyebrow" style="display:block;margin-bottom:16px;">Supervision</span>
+        <div class="supervision-grid reveal">
+          <div class="sup-card"><span class="sup-period">Aug 2023 &ndash; Present</span><h3>Couples and Relationship Therapy Supervision</h3><p>Supervise doctoral interns, counseling interns, and postdoctoral residents at UF CWC. Ongoing consultation on IPV, high-conflict couples, and DV risk assessment.</p></div>
+          <div class="sup-card"><span class="sup-period">Jan 2023 &ndash; Present</span><h3>Advanced Family Clinic: Live Supervision</h3><p>Live and video-based supervision of master's-level students providing couples and family therapy. Real-time supervisory feedback during sessions with community clients.</p></div>
+          <div class="sup-card"><span class="sup-period">Dec 2022 &ndash; Present</span><h3>General Practice Supervision</h3><p>Supervision and consultation across master's, doctoral, and postdoctoral training levels spanning individual, group, and crisis modalities.</p></div>
+          <div class="sup-card"><span class="sup-period">Dec 2022 &ndash; Aug 2023</span><h3>Crisis Counseling Supervision</h3><p>Supervised interns and residents in acute mental health response. Real-time consultation on risk assessment, safety planning, and ethical decision-making.</p></div>
+        </div>
+
+        <span class="eyebrow" style="display:block;margin-bottom:8px;">Leadership &amp; Coordination</span>
+        <div class="reveal">
+          <div class="lead-row"><div class="lead-date">Sep 2024 Present</div><div><div class="lead-title">Couples and Relationship Therapy Team Coordinator</div><div class="lead-org">UF Counseling and Wellness Center</div><p class="lead-desc">Oversee intake, referrals, and access coordination for couples therapy services. Develop and implement clinical policy. Provide individual and group supervision focused on couples work.</p></div></div>
+          <div class="lead-row"><div class="lead-date">Jun 2023 Present</div><div><div class="lead-title">Intimate Partner Violence Consultant</div><div class="lead-org">University of Florida Police Department</div><p class="lead-desc">Designated clinical consultant to UFPD for students navigating stalking and physical violence. Risk and threat assessment consultation with cross-system care coordination.</p></div></div>
+          <div class="lead-row"><div class="lead-date">Jan 2025 Present</div><div><div class="lead-title">In-Unit Faculty and Staff Council Member</div><div class="lead-org">UF Counseling and Wellness Center</div><p class="lead-desc">Elected to seven-member shared governance body overseeing faculty professional leave, merit eligibility, and peer evaluation. Contributing to bylaw development.</p></div></div>
+          <div class="lead-row"><div class="lead-date">2019 2020</div><div><div class="lead-title">Lead Counseling Intern</div><div class="lead-org">PACE Center for Girls &middot; Gainesville, FL</div><p class="lead-desc">Implemented restorative justice mediation model achieving 92.72% resolution rate two weeks post-mediation. Co-facilitated 125 therapeutic group sessions over one year.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv">
+      <div class="container">
+        <div class="cv-inner">
+          <div>
+            <span class="eyebrow" style="color:rgba(255,255,255,0.6);">Curriculum Vitae</span>
+            <h2 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.8rem);text-transform:none;letter-spacing:-0.02em;margin-bottom:12px;color:var(--white);">Full CV</h2>
+            <p>CV available upon request. Please reach out at <a href="mailto:JamieNjue@gmail.com" style="color:var(--white);text-decoration:underline;text-underline-offset:3px;">JamieNjue@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-dark" id="contact">
+      <div class="container">
+        <span class="eyebrow">Get in Touch</span>
+        <h2 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.8rem);text-transform:none;letter-spacing:-0.02em;margin-bottom:48px;">Contact</h2>
+        <div class="contact-grid">
+          <div class="reveal">
+          <div class="contact-note reveal">
+            <h3>Let's Connect</h3>
+            <p>For academic inquiries including speaking invitations, consultation requests, training collaborations, or position inquiries, please reach out by email. I welcome connection with colleagues across counselor education, clinical psychology, and community mental health.</p>
+            <p>For supervision or clinical consultation inquiries, please include your training level and the nature of your question.</p>
+            <a href="mailto:JamieNjue@gmail.com" class="btn btn-sage">Send a Message</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-name">DR. JAMIE <span>NJUE</span></div>
+    <div class="footer-copy">Clinical Assistant Professor &middot; University of Florida &middot; LMHC #MH20792</div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger  = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+    }));
+
+    // Active nav
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks  = document.querySelectorAll('.nav-links a');
+    const setActive = () => {
+      let cur = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+    };
+    window.addEventListener('scroll', setActive, { passive: true });
+    setActive();
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+  <script>
+    // Specialty card accordion
+    document.querySelectorAll('.spec-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const detail = card.querySelector('.spec-detail');
+        const arrow  = card.querySelector('.spec-arrow');
+        const isOpen = card.classList.contains('open');
+        card.classList.toggle('open');
+        detail.style.display = isOpen ? 'none' : 'block';
+        arrow.textContent    = isOpen ? '+' : '-';
+      });
+    });
+  </script>
+</body>
+</html>
