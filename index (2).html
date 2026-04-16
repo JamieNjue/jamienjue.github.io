@@ -56,20 +56,20 @@
     /* LAYOUT */
     .page { padding-top: var(--nav-h); }
     .container { max-width: var(--max-w); margin: 0 auto; padding: 0 48px; }
-    .section { padding: 64px 0; }
+    .section { padding: 40px 0; }
     .section-dark { background: var(--black); color: var(--white); }
 
     /* TYPE */
     .eyebrow { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; }
     h1 { font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 7rem); line-height: 0.92; letter-spacing: 0.02em; font-weight: 400; }
-    h2 { font-family: var(--font-body); font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.0; letter-spacing: -0.02em; font-weight: 700; margin-bottom: 48px; text-transform: none; }
+    h2 { font-family: var(--font-body); font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.0; letter-spacing: -0.02em; font-weight: 700; margin-bottom: 24px; text-transform: none; }
     h3 { font-size: 1rem; font-weight: 700; letter-spacing: 0.02em; margin-bottom: 6px; }
     p { margin-bottom: 1rem; }
     p:last-child { margin-bottom: 0; }
 
     /* HERO */
-    #home { background: var(--black); color: var(--white); min-height: calc(100vh - var(--nav-h)); display: flex; align-items: center; justify-content: flex-start; padding-left: 0; }
-    .hero-content { padding: 52px 48px 60px; display: flex; flex-direction: column; justify-content: flex-start; width: 100%; max-width: 720px; }
+    #home { background: var(--black); color: var(--white); min-height: 0; display: flex; align-items: center; justify-content: flex-start; padding-left: 0; }
+    .hero-content { padding: 36px 48px 40px; display: flex; flex-direction: column; justify-content: flex-start; width: 100%; max-width: 720px; }
     .hero-content h1 { margin-bottom: 32px; }
     .hero-content h1 em { color: var(--sage); font-style: normal; }
     .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; max-width: 740px; }
@@ -95,7 +95,7 @@
     .stat-div { width: 1px; height: 32px; background: rgba(255,255,255,0.2); flex-shrink: 0; }
 
     /* ABOUT */
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
     .about-text p { font-size: 1rem; color: var(--gray-3); line-height: 1.6; }
     .cred-item { display: grid; grid-template-columns: 80px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--border-light); align-items: start; }
     .cred-item:first-child { border-top: 1px solid var(--border-light); }
@@ -105,7 +105,7 @@
 
     /* RESEARCH */
     #research { background: var(--black); color: var(--white); }
-    .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 64px; }
+    .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 36px; }
     .interest-cell { background: var(--gray-1); padding: 24px 28px; transition: background var(--t); }
     .interest-cell:hover { background: var(--gray-2); }
     .interest-num { font-family: var(--font-display); font-size: 3rem; color: var(--border); line-height: 1; margin-bottom: 16px; display: block; }
@@ -272,7 +272,7 @@
           <div class="stat-div"></div>
           <div class="stat-item"><span class="stat-num">2020</span><span class="stat-label">Licensed LMHC</span></div>
           <div class="stat-div"></div>
-          <div class="stat-item"><span class="stat-num">5+</span><span class="stat-label">Years Supervising</span></div>
+          <div class="stat-item"><span class="stat-num">4+</span><span class="stat-label">Years Supervising</span></div>
           <div class="stat-div"></div>
           <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Guest Lectures</span></div>
           <div class="stat-div"></div>
@@ -313,10 +313,10 @@
         <p style="color:var(--gray-4);max-width:680px;margin-bottom:36px;font-size:1rem;line-height:1.8;">My research interests sit at the intersection of <strong style="color:var(--white);font-weight:500;">language</strong>, <strong style="color:var(--white);font-weight:500;">power</strong>, and <strong style="color:var(--white);font-weight:500;">culture</strong>. I am particularly interested in <strong style="color:var(--white);font-weight:500;">how psychological terminology is altered by its circulation through popular and digital discourse</strong>, what happens to the meaning of these terms in transit, how that shapes the way people understand themselves and others, and how these shifts in meaning impact both society and our field as a whole. A second line of inquiry runs through power and control across clinical, relational, and systemic contexts, with particular interest in <strong style="color:var(--white);font-weight:500;">how language functions as a mechanism of power and control, and what this means in both relationships and in systems at large</strong>.</p>
 
         <div class="research-grid reveal">
-          <div class="interest-cell"><span class="interest-num">01</span><h3>Intimate Partner Violence &amp; Perpetrator Intervention</h3><p>Clinical and systemic approaches to IPV with both survivors and perpetrators, including risk assessment, safety planning, and restorative models of intervention.</p></div>
-          <div class="interest-cell"><span class="interest-num">02</span><h3>High-Conflict Couples &amp; Relational Power Dynamics</h3><p>Patterns of coercion, control, and narcissistic presentation across clinical and subclinical populations in couples therapy contexts.</p></div>
-          <div class="interest-cell"><span class="interest-num">03</span><h3>Clinical Language in Cultural Discourse</h3><p>How psychological terminology migrates into social media and popular culture, shaping client self-concept, help-seeking behavior, and treatment engagement.</p></div>
-          <div class="interest-cell"><span class="interest-num">04</span><h3>Counselor Education &amp; Clinician Formation</h3><p>Supervision models, counselor self-efficacy, and the development of professional identity and competence in graduate training programs.</p></div>
+          <div class="interest-cell"><span class="interest-num">01</span><h3>Intimate Partner Violence &amp; Perpetrator Intervention</h3><p>How prepared new clinicians feel to work with survivors and perpetrators of intimate partner violence, what shapes that sense of preparedness, and how training programs can better support it.</p></div>
+          <div class="interest-cell"><span class="interest-num">02</span><h3>Relational Power Dynamics</h3><p>Patterns of coercion, control, and narcissistic presentation across clinical and subclinical populations in couples therapy contexts.</p></div>
+          <div class="interest-cell"><span class="interest-num">03</span><h3>Clinical Language in Cultural Discourse</h3><p>How psychological terminology is shaped by its circulation through popular and digital discourse, what happens to its meaning in transit, and how that reshapes the way people understand themselves, others, and the field itself, with particular concern for how these shifts create barriers to equitable access, accurate assessment, and effective treatment.</p></div>
+          <div class="interest-cell"><span class="interest-num">04</span><h3>Counselor Education &amp; Clinician Development</h3><p>The lived experience of developing clinicians encountering complexity in sessions for the first time, with particular interest in qualitative approaches to understanding trainee identity development and the formative experience of early clinical work with couples and families. Focused on supporting developing clinicians in navigating moments that many struggle with: high conflict and emotional intensity, client withdrawal, infidelity disclosures, and more.</p></div>
         </div>
 
         <span class="eyebrow" style="display:block;margin-bottom:16px;">Dissertation</span>
@@ -384,7 +384,9 @@
             <span class="subsection-label">Professional Trainings Delivered</span>
             <div>
               <div class="course-row"><div class="course-date">Mar 2026</div><div><div class="course-name">Intimate Partner Violence and Systemic Abuse: Clinical Assessment and Intervention</div><div class="course-inst">Professional Training &middot; Private Practice Setting &middot; Orlando, FL</div></div></div>
-              <div class="course-row"><div class="course-date">2024&ndash;2025</div><div><div class="course-name">De-escalation in Healthcare Settings</div><div class="course-inst">Suwannee River Area Health Education Center</div></div></div>
+              <div class="course-row"><div class="course-date">Jan 2025</div><div><div class="course-name">De-escalation in Healthcare Settings</div><div class="course-inst">Suwannee River Area Health Education Center</div></div></div>
+              <div class="course-row"><div class="course-date">Jun 2024</div><div><div class="course-name">De-escalation in Healthcare Settings</div><div class="course-inst">Suwannee River Area Health Education Center</div></div></div>
+              <div class="course-row"><div class="course-date">May 2023</div><div><div class="course-name">Intimate Partner Violence: Clinician Best Practices</div><div class="course-inst">Professional Training &middot; Large Private Practice Setting &middot; Gainesville, FL</div></div></div>
               <div class="course-row"><div class="course-date">Nov 2021</div><div><div class="course-name">Crisis and De-escalation in Community Settings</div><div class="course-inst">ACES in Motion</div></div></div>
               <div class="course-row"><div class="course-date">Jan 2021</div><div><div class="course-name">Trauma and Crisis: The Basics</div><div class="course-inst">Kids Count, Non-Profit</div></div></div>
             </div>
@@ -396,39 +398,39 @@
     <!-- CLINICAL -->
     <section class="section section-dark" id="clinical">
       <div class="container">
-        <span class="eyebrow">Practice &amp; Supervision</span>
-        <h2 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.8rem);text-transform:none;letter-spacing:-0.02em;margin-bottom:48px;">Clinical Work</h2>
+        <span class="eyebrow">Clinical Work &amp; Supervision</span>
+        <h2 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.8rem);text-transform:none;letter-spacing:-0.02em;margin-bottom:48px;">Clinical Work &amp; Supervision</h2>
         <p style="color:var(--gray-4);max-width:640px;margin-bottom:48px;font-size:1rem;line-height:1.8;">My approach is <strong style="color:var(--white);font-weight:500;">honest</strong> and <strong style="color:var(--white);font-weight:500;">relational</strong>. I name what goes unnamed, ask the questions that are hardest to ask, and stay with what comes up. For many clients, that kind of presence is what genuine care and support look like. It's also important to me to bring clinical work beyond the therapy room and into the community because access and trust are not simply logistical problems, they are clinical ones.</p>
 
         <span class="eyebrow">Specialties</span>
 
         <div class="spec-cards" style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:56px;">
 
-          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="toggleCard(this)">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
               <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Couples &amp; Relational Therapy</span>
               <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
             </div>
-            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">High-conflict couples, relational power dynamics, Relational Life Therapy (Terry Real), attachment wounds, betrayal, couples therapy across the lifespan.</div>
+            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">High-conflict couples, relational power dynamics, betrayal, attachment wounds, couples therapy across the lifespan.</div>
           </div>
 
-          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="toggleCard(this)">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
               <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Intimate Partner Violence</span>
               <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
             </div>
-            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Survivor intervention, perpetrator intervention, risk assessment in DV contexts, safety planning, IPV consultation.</div>
+            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Perpetrator intervention, survivor support, safety and risk assessment (including physical safety and assessment of perpetrator escalation risk), safety planning, and IPV consultation.</div>
           </div>
 
-          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="toggleCard(this)">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
               <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Complex Presentations</span>
               <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
             </div>
-            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Narcissistic traits (clinical and subclinical), BPD/NPD/ASPD/HPD, empathic confrontation, working with challenging clients.</div>
+            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Narcissistic traits (clinical and subclinical), BPD/NPD/ASPD/HPD, empathic confrontation, working with challenging clients, clinical work with involuntary and high-risk presentations.</div>
           </div>
 
-          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="toggleCard(this)">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
               <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Family Systems &amp; Intergenerational Work</span>
               <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
@@ -440,28 +442,28 @@
 
 
 
-          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="toggleCard(this)">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
               <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Identity &amp; Cultural Responsivity</span>
               <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
             </div>
-            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">LGBTQ+ affirmative practice, identity-conscious case conceptualization, culturally responsive frameworks, oppression and systemic barriers.</div>
+            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">LGBTQ+ affirmative practice, identity-conscious case conceptualization, culturally responsive frameworks, oppression and systemic barriers — across clinical and training contexts.</div>
           </div>
 
-          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="toggleCard(this)">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
-              <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Clinical Supervision &amp; Clinician Formation</span>
+              <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Clinical Supervision &amp; Clinician Development</span>
               <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
             </div>
             <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Supervision across master's, doctoral, and postdoctoral levels; live supervision; group supervision; counselor education and pedagogy.</div>
           </div>
 
-          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="this.classList.toggle('open')">
+          <div class="spec-card" style="background:var(--gray-1);border:1px solid var(--border);padding:24px 28px;cursor:pointer;" onclick="toggleCard(this)">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
               <span style="font-size:0.88rem;font-weight:500;color:var(--white);">Community-Based Mental Health Care</span>
               <span class="spec-arrow" style="color:var(--sage);font-size:1.1rem;transition:transform 0.2s;">+</span>
             </div>
-            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Certified facilitator, community outreach, expanding access to mental health care.</div>
+            <div class="spec-detail" style="display:none;margin-top:14px;font-size:0.8rem;color:var(--gray-4);line-height:1.65;">Restorative justice facilitation, community outreach and workshops, expanding access to mental health care in underserved communities.</div>
           </div>
 
         </div>
@@ -478,10 +480,10 @@
 
         <span class="eyebrow" style="display:block;margin-bottom:8px;">Leadership &amp; Coordination</span>
         <div class="reveal">
-          <div class="lead-row"><div class="lead-date">Sep 2024 Present</div><div><div class="lead-title">Couples and Relationship Therapy Team Coordinator</div><div class="lead-org">UF Counseling and Wellness Center</div><p class="lead-desc">Oversee intake, referrals, and access coordination for couples therapy services. Develop and implement clinical policy. Provide individual and group supervision focused on couples work.</p></div></div>
-          <div class="lead-row"><div class="lead-date">Jun 2023 Present</div><div><div class="lead-title">Intimate Partner Violence Consultant</div><div class="lead-org">University of Florida Police Department</div><p class="lead-desc">Designated clinical consultant to UFPD for students navigating stalking and physical violence. Risk and threat assessment consultation with cross-system care coordination.</p></div></div>
-          <div class="lead-row"><div class="lead-date">Jan 2025 Present</div><div><div class="lead-title">In-Unit Faculty and Staff Council Member</div><div class="lead-org">UF Counseling and Wellness Center</div><p class="lead-desc">Elected to seven-member shared governance body overseeing faculty professional leave, merit eligibility, and peer evaluation. Contributing to bylaw development.</p></div></div>
-          <div class="lead-row"><div class="lead-date">2019 2020</div><div><div class="lead-title">Lead Counseling Intern</div><div class="lead-org">PACE Center for Girls &middot; Gainesville, FL</div><p class="lead-desc">Implemented restorative justice mediation model achieving 92.72% resolution rate two weeks post-mediation. Co-facilitated 125 therapeutic group sessions over one year.</p></div></div>
+          <div class="lead-row"><div class="lead-date">Sep 2024&ndash;Present</div><div><div class="lead-title">Couples and Relationship Therapy Team Coordinator</div><div class="lead-org">UF Counseling and Wellness Center</div><p class="lead-desc">Oversee intake, referrals, and access coordination for couples therapy services. Develop and implement clinical policy. Provide individual and group supervision focused on couples work.</p></div></div>
+          <div class="lead-row"><div class="lead-date">Jun 2023&ndash;Present</div><div><div class="lead-title">Intimate Partner Violence Consultant</div><div class="lead-org">University of Florida Police Department</div><p class="lead-desc">Designated clinical consultant to UFPD for students navigating stalking and physical violence. Risk and threat assessment consultation with cross-system care coordination.</p></div></div>
+          <div class="lead-row"><div class="lead-date">Jan 2025&ndash;Present</div><div><div class="lead-title">In-Unit Faculty and Staff Council Member</div><div class="lead-org">UF Counseling and Wellness Center</div><p class="lead-desc">Elected to seven-member shared governance body overseeing faculty professional leave, merit eligibility, and peer evaluation. Contributing to bylaw development.</p></div></div>
+
         </div>
       </div>
     </section>
@@ -491,7 +493,7 @@
       <div class="container">
         <div class="cv-inner">
           <div>
-            <span class="eyebrow" style="color:rgba(255,255,255,0.6);">Curriculum Vitae</span>
+            <span class="eyebrow" style="color:rgba(255,255,255,0.8);">Curriculum Vitae</span>
             <h2 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.8rem);text-transform:none;letter-spacing:-0.02em;margin-bottom:12px;color:var(--white);">Full CV</h2>
             <p>CV available upon request. Please reach out at <a href="mailto:JamieNjue@gmail.com" style="color:var(--white);text-decoration:underline;text-underline-offset:3px;">JamieNjue@gmail.com</a></p>
           </div>
@@ -506,6 +508,10 @@
         <h2 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.8rem);text-transform:none;letter-spacing:-0.02em;margin-bottom:48px;">Contact</h2>
         <div class="contact-grid">
           <div class="reveal">
+            <div class="contact-row"><div class="contact-icon-box">&#9993;</div><div><span class="contact-label">Email</span><a href="mailto:JamieNjue@gmail.com" class="contact-value">JamieNjue@gmail.com</a></div></div>
+            <div class="contact-row"><div class="contact-icon-box">&#9742;</div><div><span class="contact-label">Phone</span><a href="tel:3525149996" class="contact-value">352.514.9996</a></div></div>
+            <div class="contact-row"><div class="contact-icon-box" style="font-size:0.75rem;">UF</div><div><span class="contact-label">Institution</span><span class="contact-value" style="color:var(--gray-5);">University of Florida<br>Counseling and Wellness Center<br>Gainesville, FL</span></div></div>
+          </div>
           <div class="contact-note reveal">
             <h3>Let's Connect</h3>
             <p>For academic inquiries including speaking invitations, consultation requests, training collaborations, or position inquiries, please reach out by email. I welcome connection with colleagues across counselor education, clinical psychology, and community mental health.</p>
@@ -555,18 +561,15 @@
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 
+
   <script>
-    // Specialty card accordion
-    document.querySelectorAll('.spec-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const detail = card.querySelector('.spec-detail');
-        const arrow  = card.querySelector('.spec-arrow');
-        const isOpen = card.classList.contains('open');
-        card.classList.toggle('open');
-        detail.style.display = isOpen ? 'none' : 'block';
-        arrow.textContent    = isOpen ? '+' : '-';
-      });
-    });
+    function toggleCard(card) {
+      var detail = card.querySelector('.spec-detail');
+      var arrow  = card.querySelector('.spec-arrow');
+      var isOpen = detail.style.display === 'block';
+      detail.style.display = isOpen ? 'none' : 'block';
+      arrow.textContent    = isOpen ? '+' : '-';
+    }
   </script>
 </body>
 </html>
